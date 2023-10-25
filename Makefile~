@@ -1,0 +1,16 @@
+OBJS = uimain.o tokenizer.o history.o
+
+CFLAGS=-g -O3
+
+all: uiTest
+
+uiTest: $(OBJS)
+	cc -o uiTest $(CFLAGS) $(OBJS)
+
+$(OBJS): uimain.o tokenizer.o history.o
+
+clean:
+	rm -f *.o uiTest
+
+run:uiTest
+	./uiTest

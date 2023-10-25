@@ -1,0 +1,48 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "src/history.h"
+#include "src/tokenizer.h"
+
+int main(){
+  char str[300];
+  List *history = init_history();
+
+  while(1){
+    printf("Enter words to be tokenized, enter 'q' to quit,\n to recall history enter '!n' where n is the sequence number,\n enter 'h' to view string history.\n");
+    printf("$ ");
+    fgets(str, 300, stdin);
+
+    switch(str[0]){
+    case 'q':
+      puts("Quitting...");
+      free_history(history);
+      goto done;
+
+    case 'h':
+      print_history(history);
+      break;
+
+    case '!':{
+	char *newHistory = get_history(history, atoi(str+1));
+	if (newHistory == NULL){
+	  puts("No history\n");
+	  break;
+	}else{
+	  char **tokens = tokenize(newHistory);
+	  print_tokens(tokens);
+	  free_tokens(tokens);
+	  break;
+	}
+      }
+    default:;
+      {
+      char **tokens = tokenize(str);
+      print_tokens(tokens);
+      add_history(history, str);
+      }
+    }
+  }
+
+ done:
+  return 0;
+}

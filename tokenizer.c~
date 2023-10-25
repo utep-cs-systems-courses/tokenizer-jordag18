@@ -1,0 +1,90 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "src/tokenizer.h"
+
+int space_char(char c){
+  return (c == '\t' || c == ' ' || c == '\n');
+}
+
+int non_space_char(char c){
+  return (c == '\0')?0:!(space_char(c));
+}
+
+char *token_start(char *str){
+  while(space_char(*str) == 0){
+    str++;
+  }
+  if(*str == '\0'){
+    return 0;
+  }
+  else {
+    return str;
+  }
+}
+
+
+char *token_terminator(char *token){
+  while(non_space_char(*token)){
+    token++;
+  }
+  return token;
+}
+
+int count_tokens(char *str){
+  int count = 0;
+  while(*str !='\0'){
+    str = token_start(str);
+    str = token_terminator(str);
+    count++;
+  }
+  return count;
+}
+
+char *copy_str(char *intStr, short len){
+  char *copy = (char*)malloc((len+1)*sizeof(char));
+  char *p = copy;
+
+  int i = 0;
+  while(i<len){
+    *copy = *intStr;
+    intStr++;
+    copy++;
+    i++;
+  }
+  *copy = '\0';
+  return p;
+}
+
+char **tokenize(char* str){
+  int num_tokens = count_tokens(str);
+  char **tokens = (char **)malloc((num_tokens + 1) * sizeof(char*));
+  char *start = str;
+  int i = 0;
+  while(i<num_tokens){
+    start = token_start(start);
+    char *end = copy_str(start,token_terminator(start)-start);
+    *tokens = end;
+    start = token_terminator(start);
+    tokens++;
+    i++;
+  }
+
+  *tokens = '\0';
+  return tokens - num_tokens;
+}
+
+void print_tokens(char **tokens){
+  while(*tokens != 0){
+    printf("%s", *tokens);
+    tokens++;
+  }
+}
+
+void free_tokens(char **tokens){
+  char** temp = tokens;
+  while(*temp != 0){
+    free(*temp);
+    temp++;
+  }
+  free(tokens);
+}

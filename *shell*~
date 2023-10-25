@@ -1,0 +1,150 @@
+student@systems-vm:~/CompOrg/tokenizer-jordag18> cc uimain.c
+
+uimain.c: In function ‘main’:
+uimain.c:12:10: warning: passing argument 1 of ‘printf’ makes pointer from integer without a cast [-Wint-conversion]
+   printf(c);
+          ^
+In file included from uimain.c:1:0:
+/usr/include/stdio.h:318:12: note: expected ‘const char * restrict’ but argument is of type ‘int’
+ extern int printf (const char *__restrict __format, ...);
+            ^~~~~~
+uimain.c:10:5: error: label ‘done’ used but not defined
+     goto done;
+     ^~~~
+student@systems-vm:~/CompOrg/tokenizer-jordag18> student@systems-vm:~/CompOrg/tokenizer-jordag1
+student@systems-vm:~/CompOrg/tokenizer-jordag18> cc uimain.c
+uimain.c: In function ‘main’:
+uimain.c:10:10: warning: passing argument 1 of ‘printf’ makes pointer from integer without a cast [-Wint-conversion]
+   printf(c);
+          ^
+In file included from uimain.c:1:0:
+/usr/include/stdio.h:318:12: note: expected ‘const char * restrict’ but argument is of type ‘int’
+ extern int printf (const char *__restrict __format, ...);
+            ^~~~~~
+student@systems-vm:~/CompOrg/tokenizer-jordag18> cc uimain.c
+student@systems-vm:~/CompOrg/tokenizer-jordag18> ls
+a.out  LICENSE  README.md  sortArgDemo  src  uimain.c  uimain.c~
+student@systems-vm:~/CompOrg/tokenizer-jordag18> cc -c uimain.c
+student@systems-vm:~/CompOrg/tokenizer-jordag18> ls
+a.out  LICENSE  README.md  sortArgDemo  src  uimain.c  uimain.c~  uimain.o
+student@systems-vm:~/CompOrg/tokenizer-jordag18> cc -o uimain.o
+cc: fatal error: no input files
+compilation terminated.
+student@systems-vm:~/CompOrg/tokenizer-jordag18> cc -o uiTest uimain.o
+student@systems-vm:~/CompOrg/tokenizer-jordag18> ls
+a.out  LICENSE  README.md  sortArgDemo  src  uimain.c  uimain.c~  uimain.o  uiTest
+student@systems-vm:~/CompOrg/tokenizer-jordag18> ./uiTest
+$student@systems-vm:~/CompOrg/tokenizer-jordag18> 
+student@systems-vm:~/CompOrg/tokenizer-jordag18> 
+student@systems-vm:~/CompOrg/tokenizer-jordag18> cc -c uimain.c
+student@systems-vm:~/CompOrg/tokenizer-jordag18> cc -o uiTest uimain.o
+student@systems-vm:~/CompOrg/tokenizer-jordag18> ls
+a.out  LICENSE  README.md  sortArgDemo  src  uimain.c  uimain.c~  uimain.o  uiTest
+student@systems-vm:~/CompOrg/tokenizer-jordag18> ./uiTest
+$student@systems-vm:~/CompOrg/tokenizer-jordag18> s
+If 's' is not a typo you can use command-not-found to lookup the package that contains it, like this:
+    cnf s
+student@systems-vm:~/CompOrg/tokenizer-jordag18> cc -c uimain.c
+uimain.c: In function ‘main’:
+uimain.c:8:3: warning: implicit declaration of function ‘gets’; did you mean ‘fgets’? [-Wimplicit-function-declaration]
+   gets(str);
+   ^~~~
+   fgets
+student@systems-vm:~/CompOrg/tokenizer-jordag18> cc -c ui
+cc: error: ui: No such file or directory
+cc: fatal error: no input files
+compilation terminated.
+student@systems-vm:~/CompOrg/tokenizer-jordag18> cc -c uimain.c
+uimain.c: In function ‘main’:
+uimain.c:8:3: error: too few arguments to function ‘fgets’
+   fgets(str);
+   ^~~~~
+In file included from uimain.c:1:0:
+/usr/include/stdio.h:564:14: note: declared here
+ extern char *fgets (char *__restrict __s, int __n, FILE *__restrict __stream)
+              ^~~~~
+student@systems-vm:~/CompOrg/tokenizer-jordag18> cc -c uimain.c
+student@systems-vm:~/CompOrg/tokenizer-jordag18>
+bash: syntax error near unexpected token `newline'
+student@systems-vm:~/CompOrg/tokenizer-jordag18> ls
+a.out  LICENSE  README.md  sortArgDemo  src  uimain.c  uimain.c~  uimain.o  uiTest
+student@systems-vm:~/CompOrg/tokenizer-jordag18> cc -o uiTest uimain.o
+student@systems-vm:~/CompOrg/tokenizer-jordag18> ./uiTest
+$Here is my test
+$student@systems-vm:~/CompOrg/tokenizer-jordag18> 
+student@systems-vm:~/CompOrg/tokenizer-jordag18> cc -c uimain.c
+student@systems-vm:~/CompOrg/tokenizer-jordag18> cc -o uiTest uimain.o
+student@systems-vm:~/CompOrg/tokenizer-jordag18> ./uiTest
+$student@systems-vm:~/CompOrg/tokenizer-jordag18> ./uiTest
+$Here is string
+$Here is stringstudent@systems-vm:~/CompOrg/tokenizer-jordag18> cc -c uimain.c
+student@systems-vm:~/CompOrg/tokenizer-jordag18> cc -o uiTest uimain.o
+student@systems-vm:~/CompOrg/tokenizer-jordag18> ./uiTest
+$Here is string
+$Here is string
+student@systems-vm:~/CompOrg/tokenizer-jordag18> cc -o uiTest uimain.o
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make
+make: *** No rule to make target 'draw.h', needed by 'uimain.o'.  Stop.
+student@systems-vm:~/CompOrg/tokenizer-jordag18> ls
+a.out  LICENSE  Makefile  README.md  sortArgDemo  src  uimain.c  uimain.c~  uimain.o  uiTest
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make
+cc -g -O3   -c -o uimain.o uimain.c
+cc -o uiTest FLAGS uimain.o
+cc: error: FLAGS: No such file or directory
+make: *** [Makefile:8: uiTest] Error 1
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make clean
+rm -f *.o uiTest
+student@systems-vm:~/CompOrg/tokenizer-jordag18> ls
+a.out  LICENSE  Makefile  Makefile~  README.md  sortArgDemo  src  uimain.c  uimain.c~
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make
+cc -g -O3   -c -o uimain.o uimain.c
+cc -o uiTest FLAGS uimain.o
+cc: error: FLAGS: No such file or directory
+make: *** [Makefile:8: uiTest] Error 1
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make
+cc -o uiTest uimain.o -g -O3
+student@systems-vm:~/CompOrg/tokenizer-jordag18> ls
+a.out    Makefile   README.md    src       uimain.c~  uiTest
+LICENSE  Makefile~  sortArgDemo  uimain.c  uimain.o
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make run
+./uiTest
+$ hello world!
+hello world!
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make clean
+rm -f *.o uiTest
+student@systems-vm:~/CompOrg/tokenizer-jordag18> ls
+a.out  LICENSE  Makefile  Makefile~  README.md  sortArgDemo  src  uimain.c  uimain.c~
+student@systems-vm:~/CompOrg/tokenizer-jordag18> rm sortArgDemo/
+rm: cannot remove 'sortArgDemo/': Is a directory
+student@systems-vm:~/CompOrg/tokenizer-jordag18> ls
+a.out  LICENSE  Makefile  Makefile~  README.md  sortArgDemo  src  uimain.c  uimain.c~
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make run
+cc -g -O3   -c -o uimain.o uimain.c
+cc -o uiTest uimain.o -g -O3
+./uiTest
+$ i did it!
+i did it!
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make 
+cc -g -O3   -c -o uimain.o uimain.c
+uimain.c: In function ‘main’:
+uimain.c:10:18: warning: initialization from incompatible pointer type [-Wincompatible-pointer-types]
+   char *strptr = &str;
+                  ^
+cc -o uiTest uimain.o -g -O3
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make
+cc -g -O3   -c -o uimain.o uimain.c
+cc -o uiTest uimain.o -g -O3
+student@systems-vm:~/CompOrg/tokenizer-jordag18> ls
+a.out    Makefile   README.md    src       uimain.c~  uiTest
+LICENSE  Makefile~  sortArgDemo  uimain.c  uimain.o
+student@systems-vm:~/CompOrg/tokenizer-jordag18> ./uiTest
+$ This is a test
+This is a test
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make
+cc -g -O3   -c -o uimain.o uimain.c
+cc -o uiTest uimain.o -g -O3
+student@systems-vm:~/CompOrg/tokenizer-jordag18> ./uiTest
+$ This is a pointer
+This is a pointer
+T
+student@systems-vm:~/CompOrg/tokenizer-jordag18> 

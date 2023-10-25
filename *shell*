@@ -1,0 +1,649 @@
+student@systems-vm:~/CompOrg/tokenizer-jordag18> cc uimain.c
+
+uimain.c: In function ‘main’:
+uimain.c:12:10: warning: passing argument 1 of ‘printf’ makes pointer from integer without a cast [-Wint-conversion]
+   printf(c);
+          ^
+In file included from uimain.c:1:0:
+/usr/include/stdio.h:318:12: note: expected ‘const char * restrict’ but argument is of type ‘int’
+ extern int printf (const char *__restrict __format, ...);
+            ^~~~~~
+uimain.c:10:5: error: label ‘done’ used but not defined
+     goto done;
+     ^~~~
+student@systems-vm:~/CompOrg/tokenizer-jordag18> student@systems-vm:~/CompOrg/tokenizer-jordag1
+student@systems-vm:~/CompOrg/tokenizer-jordag18> cc uimain.c
+uimain.c: In function ‘main’:
+uimain.c:10:10: warning: passing argument 1 of ‘printf’ makes pointer from integer without a cast [-Wint-conversion]
+   printf(c);
+          ^
+In file included from uimain.c:1:0:
+/usr/include/stdio.h:318:12: note: expected ‘const char * restrict’ but argument is of type ‘int’
+ extern int printf (const char *__restrict __format, ...);
+            ^~~~~~
+student@systems-vm:~/CompOrg/tokenizer-jordag18> cc uimain.c
+student@systems-vm:~/CompOrg/tokenizer-jordag18> ls
+a.out  LICENSE  README.md  sortArgDemo  src  uimain.c  uimain.c~
+student@systems-vm:~/CompOrg/tokenizer-jordag18> cc -c uimain.c
+student@systems-vm:~/CompOrg/tokenizer-jordag18> ls
+a.out  LICENSE  README.md  sortArgDemo  src  uimain.c  uimain.c~  uimain.o
+student@systems-vm:~/CompOrg/tokenizer-jordag18> cc -o uimain.o
+cc: fatal error: no input files
+compilation terminated.
+student@systems-vm:~/CompOrg/tokenizer-jordag18> cc -o uiTest uimain.o
+student@systems-vm:~/CompOrg/tokenizer-jordag18> ls
+a.out  LICENSE  README.md  sortArgDemo  src  uimain.c  uimain.c~  uimain.o  uiTest
+student@systems-vm:~/CompOrg/tokenizer-jordag18> ./uiTest
+$student@systems-vm:~/CompOrg/tokenizer-jordag18> 
+student@systems-vm:~/CompOrg/tokenizer-jordag18> 
+student@systems-vm:~/CompOrg/tokenizer-jordag18> cc -c uimain.c
+student@systems-vm:~/CompOrg/tokenizer-jordag18> cc -o uiTest uimain.o
+student@systems-vm:~/CompOrg/tokenizer-jordag18> ls
+a.out  LICENSE  README.md  sortArgDemo  src  uimain.c  uimain.c~  uimain.o  uiTest
+student@systems-vm:~/CompOrg/tokenizer-jordag18> ./uiTest
+$student@systems-vm:~/CompOrg/tokenizer-jordag18> s
+If 's' is not a typo you can use command-not-found to lookup the package that contains it, like this:
+    cnf s
+student@systems-vm:~/CompOrg/tokenizer-jordag18> cc -c uimain.c
+uimain.c: In function ‘main’:
+uimain.c:8:3: warning: implicit declaration of function ‘gets’; did you mean ‘fgets’? [-Wimplicit-function-declaration]
+   gets(str);
+   ^~~~
+   fgets
+student@systems-vm:~/CompOrg/tokenizer-jordag18> cc -c ui
+cc: error: ui: No such file or directory
+cc: fatal error: no input files
+compilation terminated.
+student@systems-vm:~/CompOrg/tokenizer-jordag18> cc -c uimain.c
+uimain.c: In function ‘main’:
+uimain.c:8:3: error: too few arguments to function ‘fgets’
+   fgets(str);
+   ^~~~~
+In file included from uimain.c:1:0:
+/usr/include/stdio.h:564:14: note: declared here
+ extern char *fgets (char *__restrict __s, int __n, FILE *__restrict __stream)
+              ^~~~~
+student@systems-vm:~/CompOrg/tokenizer-jordag18> cc -c uimain.c
+student@systems-vm:~/CompOrg/tokenizer-jordag18>
+bash: syntax error near unexpected token `newline'
+student@systems-vm:~/CompOrg/tokenizer-jordag18> ls
+a.out  LICENSE  README.md  sortArgDemo  src  uimain.c  uimain.c~  uimain.o  uiTest
+student@systems-vm:~/CompOrg/tokenizer-jordag18> cc -o uiTest uimain.o
+student@systems-vm:~/CompOrg/tokenizer-jordag18> ./uiTest
+$Here is my test
+$student@systems-vm:~/CompOrg/tokenizer-jordag18> 
+student@systems-vm:~/CompOrg/tokenizer-jordag18> cc -c uimain.c
+student@systems-vm:~/CompOrg/tokenizer-jordag18> cc -o uiTest uimain.o
+student@systems-vm:~/CompOrg/tokenizer-jordag18> ./uiTest
+$student@systems-vm:~/CompOrg/tokenizer-jordag18> ./uiTest
+$Here is string
+$Here is stringstudent@systems-vm:~/CompOrg/tokenizer-jordag18> cc -c uimain.c
+student@systems-vm:~/CompOrg/tokenizer-jordag18> cc -o uiTest uimain.o
+student@systems-vm:~/CompOrg/tokenizer-jordag18> ./uiTest
+$Here is string
+$Here is string
+student@systems-vm:~/CompOrg/tokenizer-jordag18> cc -o uiTest uimain.o
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make
+make: *** No rule to make target 'draw.h', needed by 'uimain.o'.  Stop.
+student@systems-vm:~/CompOrg/tokenizer-jordag18> ls
+a.out  LICENSE  Makefile  README.md  sortArgDemo  src  uimain.c  uimain.c~  uimain.o  uiTest
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make
+cc -g -O3   -c -o uimain.o uimain.c
+cc -o uiTest FLAGS uimain.o
+cc: error: FLAGS: No such file or directory
+make: *** [Makefile:8: uiTest] Error 1
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make clean
+rm -f *.o uiTest
+student@systems-vm:~/CompOrg/tokenizer-jordag18> ls
+a.out  LICENSE  Makefile  Makefile~  README.md  sortArgDemo  src  uimain.c  uimain.c~
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make
+cc -g -O3   -c -o uimain.o uimain.c
+cc -o uiTest FLAGS uimain.o
+cc: error: FLAGS: No such file or directory
+make: *** [Makefile:8: uiTest] Error 1
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make
+cc -o uiTest uimain.o -g -O3
+student@systems-vm:~/CompOrg/tokenizer-jordag18> ls
+a.out    Makefile   README.md    src       uimain.c~  uiTest
+LICENSE  Makefile~  sortArgDemo  uimain.c  uimain.o
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make run
+./uiTest
+$ hello world!
+hello world!
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make clean
+rm -f *.o uiTest
+student@systems-vm:~/CompOrg/tokenizer-jordag18> ls
+a.out  LICENSE  Makefile  Makefile~  README.md  sortArgDemo  src  uimain.c  uimain.c~
+student@systems-vm:~/CompOrg/tokenizer-jordag18> rm sortArgDemo/
+rm: cannot remove 'sortArgDemo/': Is a directory
+student@systems-vm:~/CompOrg/tokenizer-jordag18> ls
+a.out  LICENSE  Makefile  Makefile~  README.md  sortArgDemo  src  uimain.c  uimain.c~
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make run
+cc -g -O3   -c -o uimain.o uimain.c
+cc -o uiTest uimain.o -g -O3
+./uiTest
+$ i did it!
+i did it!
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make 
+cc -g -O3   -c -o uimain.o uimain.c
+uimain.c: In function ‘main’:
+uimain.c:10:18: warning: initialization from incompatible pointer type [-Wincompatible-pointer-types]
+   char *strptr = &str;
+                  ^
+cc -o uiTest uimain.o -g -O3
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make
+cc -g -O3   -c -o uimain.o uimain.c
+cc -o uiTest uimain.o -g -O3
+student@systems-vm:~/CompOrg/tokenizer-jordag18> ls
+a.out    Makefile   README.md    src       uimain.c~  uiTest
+LICENSE  Makefile~  sortArgDemo  uimain.c  uimain.o
+student@systems-vm:~/CompOrg/tokenizer-jordag18> ./uiTest
+$ This is a test
+This is a test
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make
+cc -g -O3   -c -o uimain.o uimain.c
+cc -o uiTest uimain.o -g -O3
+student@systems-vm:~/CompOrg/tokenizer-jordag18> ./uiTest
+$ This is a pointer
+This is a pointer
+T
+student@systems-vm:~/CompOrg/tokenizer-jordag18> 
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make
+make: *** No rule to make target 'tokenizer.h', needed by 'uimain.o'.  Stop.
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make
+make: *** No rule to make target 'tokenizer.h', needed by 'uimain.o'.  Stop.
+student@systems-vm:~/CompOrg/tokenizer-jordag18> ls
+a.out    Makefile   README.md  #*shell*#    src          uimain.c   uimain.o
+LICENSE  Makefile~  *shell*    sortArgDemo  tokenizer.c  uimain.c~  uiTest
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make clean
+rm -f *.o uiTest
+student@systems-vm:~/CompOrg/tokenizer-jordag18> ls
+a.out    Makefile   README.md  #*shell*#    src          uimain.c
+LICENSE  Makefile~  *shell*    sortArgDemo  tokenizer.c  uimain.c~
+student@systems-vm:~/CompOrg/tokenizer-jordag18> cd src
+student@systems-vm:~/CompOrg/tokenizer-jordag18/src> ls
+history.h  README.md  tester.c  tokenizer.h
+student@systems-vm:~/CompOrg/tokenizer-jordag18/src> cd ..
+student@systems-vm:~/CompOrg/tokenizer-jordag18> ls
+a.out    Makefile   README.md  #*shell*#    src          uimain.c
+LICENSE  Makefile~  *shell*    sortArgDemo  tokenizer.c  uimain.c~
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make
+make: *** No rule to make target 'tokenizer.h', needed by 'uimain.o'.  Stop.
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make
+cc -g -O3   -c -o uimain.o uimain.c
+uimain.c:2:10: fatal error: tokenizer.h: No such file or directory
+ #include "tokenizer.h"
+          ^~~~~~~~~~~~~
+compilation terminated.
+make: *** [<builtin>: uimain.o] Error 1
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make
+cc -g -O3   -c -o uimain.o uimain.c
+cc -g -O3   -c -o tokenizer.o tokenizer.c
+tokenizer.c: In function ‘space_char’:
+tokenizer.c:6:12: error: ‘true’ undeclared (first use in this function)
+     return true;
+            ^~~~
+tokenizer.c:6:12: note: each undeclared identifier is reported only once for each function it appears in
+tokenizer.c:8:10: error: ‘false’ undeclared (first use in this function); did you mean ‘fclose’?
+   return false;
+          ^~~~~
+          fclose
+make: *** [<builtin>: tokenizer.o] Error 1
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make
+cc -g -O3   -c -o tokenizer.o tokenizer.c
+cc -o uiTest uimain.o tokenizer.o -g -O3
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make
+cc -g -O3   -c -o uimain.o uimain.c
+cc -o uiTest uimain.o tokenizer.o -g -O3
+student@systems-vm:~/CompOrg/tokenizer-jordag18> ./uiTest
+$ This is a test
+This is a test
+T
+1
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make
+cc -g -O3   -c -o uimain.o uimain.c
+cc -g -O3   -c -o tokenizer.o tokenizer.c
+cc -o uiTest uimain.o tokenizer.o -g -O3
+student@systems-vm:~/CompOrg/tokenizer-jordag18> ./uiTest
+$ Tester
+Tester
+T
+0
+student@systems-vm:~/CompOrg/tokenizer-jordag18> ./uiTest
+$  
+ 
+ 
+1
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make
+cc -g -O3   -c -o uimain.o uimain.c
+cc -g -O3   -c -o tokenizer.o tokenizer.c
+cc -o uiTest uimain.o tokenizer.o -g -O3
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make run
+./uiTest
+$ Test
+Test
+T
+space_char: 0
+non_space_char: 1
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make run
+./uiTest
+$  
+ 
+ 
+space_char: 1
+non_space_char: 0
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make 
+cc -g -O3   -c -o tokenizer.o tokenizer.c
+tokenizer.c: In function ‘token_start’:
+tokenizer.c:23:3: error: expected ‘)’ before ‘return’
+   return char *charstr = &character;
+   ^~~~~~
+tokenizer.c:24:5: error: expected expression before ‘}’ token
+     }
+     ^
+make: *** [<builtin>: tokenizer.o] Error 1
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make
+cc -g -O3   -c -o tokenizer.o tokenizer.c
+tokenizer.c: In function ‘token_start’:
+tokenizer.c:23:10: error: expected expression before ‘char’
+   return char *charstr = &character;
+          ^~~~
+make: *** [<builtin>: tokenizer.o] Error 1
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make
+cc -g -O3   -c -o tokenizer.o tokenizer.c
+tokenizer.c: In function ‘token_start’:
+tokenizer.c:24:9: warning: return makes pointer from integer without a cast [-Wint-conversion]
+  return *charstr;
+         ^~~~~~~~
+cc -o uiTest uimain.o tokenizer.o -g -O3
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make
+cc -g -O3   -c -o tokenizer.o tokenizer.c
+cc -o uiTest uimain.o tokenizer.o -g -O3
+student@systems-vm:~/CompOrg/tokenizer-jordag18> 
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make
+cc -g -O3   -c -o tokenizer.o tokenizer.c
+tokenizer.c: In function ‘token_start’:
+tokenizer.c:20:10: error: invalid type argument of unary ‘*’ (have ‘int’)
+   return *str[0];
+          ^~~~~~~
+make: *** [<builtin>: tokenizer.o] Error 1
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make
+cc -g -O3   -c -o tokenizer.o tokenizer.c
+tokenizer.c: In function ‘token_start’:
+tokenizer.c:20:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return *str;
+          ^~~~
+cc -o uiTest uimain.o tokenizer.o -g -O3
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make
+cc -g -O3   -c -o tokenizer.o tokenizer.c
+tokenizer.c: In function ‘token_start’:
+tokenizer.c:20:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return *str;
+          ^~~~
+cc -o uiTest uimain.o tokenizer.o -g -O3
+student@systems-vm:~/CompOrg/tokenizer-jordag18> 
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make
+cc -g -O3   -c -o tokenizer.o tokenizer.c
+cc -o uiTest uimain.o tokenizer.o -g -O3
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make
+cc -g -O3   -c -o uimain.o uimain.c
+uimain.c: In function ‘main’:
+uimain.c:19:19: warning: passing argument 1 of ‘token_start’ makes pointer from integer without a cast [-Wint-conversion]
+   x = token_start(*strptr);
+                   ^
+In file included from uimain.c:2:0:
+src/tokenizer.h:18:7: note: expected ‘char *’ but argument is of type ‘char’
+ char *token_start(char *str);
+       ^~~~~~~~~~~
+uimain.c:19:5: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+   x = token_start(*strptr);
+     ^
+cc -o uiTest uimain.o tokenizer.o -g -O3
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make
+cc -g -O3   -c -o uimain.o uimain.c
+uimain.c: In function ‘main’:
+uimain.c:19:5: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+   x = token_start(str);
+     ^
+cc -o uiTest uimain.o tokenizer.o -g -O3
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make
+cc -g -O3   -c -o uimain.o uimain.c
+uimain.c: In function ‘main’:
+uimain.c:19:7: error: assignment to expression with array type
+   str = token_start(str);
+       ^
+make: *** [<builtin>: uimain.o] Error 1
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make
+cc -g -O3   -c -o uimain.o uimain.c
+uimain.c: In function ‘main’:
+uimain.c:19:19: error: invalid initializer
+   char str2[50] = token_start(str);
+                   ^~~~~~~~~~~
+make: *** [<builtin>: uimain.o] Error 1
+student@systems-vm:~/CompOrg/tokenizer-jordag18> cc -o uiTest uimain.o tokenizer.o -g -O3
+student@systems-vm:~/CompOrg/tokenizer-jordag18> 
+student@systems-vm:~/CompOrg/tokenizer-jordag18> bash: syntax error near unexpected token `newline'
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make
+cc -g -O3   -c -o uimain.o uimain.c
+uimain.c: In function ‘main’:
+uimain.c:19:19: error: invalid initializer
+   char str2[50] = token_start(str);
+                   ^~~~~~~~~~~
+make: *** [<builtin>: uimain.o] Error 1
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make
+cc -g -O3   -c -o uimain.o uimain.c
+cc -g -O3   -c -o tokenizer.o tokenizer.c
+cc -o uiTest uimain.o tokenizer.o -g -O3
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make
+cc -g -O3   -c -o uimain.o uimain.c
+uimain.c: In function ‘main’:
+uimain.c:19:15: warning: passing argument 1 of ‘token_start’ from incompatible pointer type [-Wincompatible-pointer-types]
+   token_start(&str);
+               ^
+In file included from uimain.c:2:0:
+src/tokenizer.h:18:7: note: expected ‘char *’ but argument is of type ‘char (*)[50]’
+ char *token_start(char *str);
+       ^~~~~~~~~~~
+cc -o uiTest uimain.o tokenizer.o -g -O3
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make
+cc -g -O3   -c -o uimain.o uimain.c
+cc -o uiTest uimain.o tokenizer.o -g -O3
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make
+cc -g -O3   -c -o uimain.o uimain.c
+cc -o uiTest uimain.o tokenizer.o -g -O3
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make run
+./uiTest
+$ Test testo
+Test testo
+T
+space_char: 0
+non_space_char: 1
+token_start: Test testo
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make
+cc -g -O3   -c -o tokenizer.o tokenizer.c
+tokenizer.c: In function ‘token_start’:
+tokenizer.c:21:16: warning: return makes pointer from integer without a cast [-Wint-conversion]
+      return str[0];
+             ~~~^~~
+tokenizer.c:22:10: error: expected expression before ‘char’
+   return char *ptr = NULL;
+          ^~~~
+make: *** [<builtin>: tokenizer.o] Error 1
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make
+cc -g -O3   -c -o tokenizer.o tokenizer.c
+tokenizer.c: In function ‘token_start’:
+tokenizer.c:21:13: error: invalid type argument of unary ‘*’ (have ‘int’)
+      return *str[0];
+             ^~~~~~~
+tokenizer.c:23:10: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return *ptr;
+          ^~~~
+make: *** [<builtin>: tokenizer.o] Error 1
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make
+cc -g -O3   -c -o tokenizer.o tokenizer.c
+cc -o uiTest uimain.o tokenizer.o -g -O3
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make run
+./uiTest
+$ test tester
+test tester
+t
+space_char: 0
+non_space_char: 1
+token_start: test tester
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make
+cc -g -O3   -c -o tokenizer.o tokenizer.c
+tokenizer.c: In function ‘token_start’:
+tokenizer.c:23:12: warning: return makes pointer from integer without a cast [-Wint-conversion]
+     return *str;
+            ^~~~
+cc -o uiTest uimain.o tokenizer.o -g -O3
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make
+cc -g -O3   -c -o tokenizer.o tokenizer.c
+cc -o uiTest uimain.o tokenizer.o -g -O3
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make run
+./uiTest
+$ tester test
+tester test
+t
+space_char: 0
+non_space_char: 1
+token_start: tester test
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make run
+./uiTest
+$ 
+
+
+space_char: 0
+non_space_char: 1
+token_start: 
+student@systems-vm:~/CompOrg/tokenizer-jordag18> 
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make
+cc -g -O3   -c -o tokenizer.o tokenizer.c
+tokenizer.c: In function ‘token_start’:
+tokenizer.c:23:12: warning: return makes pointer from integer without a cast [-Wint-conversion]
+     return *str;
+            ^~~~
+cc -o uiTest uimain.o tokenizer.o -g -O3
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make
+cc -g -O3   -c -o tokenizer.o tokenizer.c
+tokenizer.c:19:8: error: conflicting types for ‘token_start’
+ char* *token_start(char *str){
+        ^~~~~~~~~~~
+In file included from tokenizer.c:2:0:
+src/tokenizer.h:18:7: note: previous declaration of ‘token_start’ was here
+ char *token_start(char *str);
+       ^~~~~~~~~~~
+tokenizer.c: In function ‘token_start’:
+tokenizer.c:23:12: warning: return makes pointer from integer without a cast [-Wint-conversion]
+     return *str;
+            ^~~~
+make: *** [<builtin>: tokenizer.o] Error 1
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make
+cc -g -O3   -c -o tokenizer.o tokenizer.c
+cc -o uiTest uimain.o tokenizer.o -g -O3
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make run
+./uiTest
+$ tester test
+tester test
+t
+space_char: 0
+non_space_char: 1
+token_start: tester test
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make
+cc -g -O3   -c -o tokenizer.o tokenizer.c
+tokenizer.c: In function ‘token_start’:
+tokenizer.c:29:14: warning: return makes pointer from integer without a cast [-Wint-conversion]
+       return c;
+              ^
+cc -o uiTest uimain.o tokenizer.o -g -O3
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make
+cc -g -O3   -c -o tokenizer.o tokenizer.c
+tokenizer.c: In function ‘token_start’:
+tokenizer.c:29:14: error: invalid type argument of unary ‘*’ (have ‘int’)
+       return *c;
+              ^~
+make: *** [<builtin>: tokenizer.o] Error 1
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make
+cc -g -O3   -c -o tokenizer.o tokenizer.c
+cc -o uiTest uimain.o tokenizer.o -g -O3
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make run
+./uiTest
+$ test tester test
+test tester test
+t
+space_char: 0
+non_space_char: 1
+token_start: test tester test
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make
+cc -g -O3   -c -o tokenizer.o tokenizer.c
+tokenizer.c: In function ‘non_space_char’:
+tokenizer.c:12:28: error: expected ‘)’ before ‘c’
+   if(c == '\t' || c == ' ' c == '\0')
+                            ^
+tokenizer.c: In function ‘token_start’:
+tokenizer.c:23:17: warning: return makes pointer from integer without a cast [-Wint-conversion]
+       return str[i];
+              ~~~^~~
+tokenizer.c:27:13: warning: return makes pointer from integer without a cast [-Wint-conversion]
+   return str[i];
+          ~~~^~~
+make: *** [<builtin>: tokenizer.o] Error 1
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make
+cc -g -O3   -c -o tokenizer.o tokenizer.c
+tokenizer.c: In function ‘non_space_char’:
+tokenizer.c:9:28: error: expected ‘)’ before ‘c’
+   if(c == '\t' || c == ' ' c == '\0')
+                            ^
+tokenizer.c: In function ‘count_words’:
+tokenizer.c:35:14: warning: comparison between pointer and integer
+   while(*str != NULL && *str !='\0'){
+              ^~
+tokenizer.c:36:11: warning: implicit declaration of function ‘word_start’; did you mean ‘token_start’? [-Wimplicit-function-declaration]
+     str = word_start(str);
+           ^~~~~~~~~~
+           token_start
+tokenizer.c:36:9: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+     str = word_start(str);
+         ^
+tokenizer.c:37:11: warning: implicit declaration of function ‘word_terminator’; did you mean ‘wordterminator’? [-Wimplicit-function-declaration]
+     str = word_terminator(str);
+           ^~~~~~~~~~~~~~~
+           wordterminator
+tokenizer.c:37:9: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+     str = word_terminator(str);
+         ^
+make: *** [<builtin>: tokenizer.o] Error 1
+student@systems-vm:~/CompOrg/tokenizer-jordag18>            token_start
+tokenizer.c:36:9: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+     str = word_start(str);
+         ^
+tokenizer.c:37:11: warning: implicit declaration of function ‘word_terminator’; did you mean ‘wordterminator’? [-Wimplicit-function-declaration]
+     str = word_terminator(str);
+           ^~~~~~~~~~~~~~~
+           wordterminator
+tokenizer.c:37:9: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+     str = word_terminator(str);
+         ^
+make: *** [<builtin>: tokenizer.o] Error 1
+student@systems-vm:~/CompOrg/tokenizer-jordag18> 
+If 'token_start' is not a typo you can use command-not-found to lookup the package that contains it, like this:
+    cnf token_start
+student@systems-vm:~/CompOrg/tokenizer-jordag18> If 'tokenizer.c:36:9:' is not a typo you can use command-not-found to lookup the package that contains it, like this:
+    cnf tokenizer.c:36:9:
+student@systems-vm:~/CompOrg/tokenizer-jordag18> bash: syntax error near unexpected token `('
+student@systems-vm:~/CompOrg/tokenizer-jordag18> If '^' is not a typo you can use command-not-found to lookup the package that contains it, like this:
+    cnf ^
+student@systems-vm:~/CompOrg/tokenizer-jordag18> If 'tokenizer.c:37:11:' is not a typo you can use command-not-found to lookup the package that contains it, like this:
+    cnf tokenizer.c:37:11:
+If 'did' is not a typo you can use command-not-found to lookup the package that contains it, like this:
+    cnf did
+student@systems-vm:~/CompOrg/tokenizer-jordag18> bash: syntax error near unexpected token `('
+student@systems-vm:~/CompOrg/tokenizer-jordag18> If '^~~~~~~~~~~~~~~' is not a typo you can use command-not-found to lookup the package that contains it, like this:
+    cnf ^~~~~~~~~~~~~~~
+student@systems-vm:~/CompOrg/tokenizer-jordag18> If 'wordterminator' is not a typo you can use command-not-found to lookup the package that contains it, like this:
+    cnf wordterminator
+student@systems-vm:~/CompOrg/tokenizer-jordag18> If 'tokenizer.c:37:9:' is not a typo you can use command-not-found to lookup the package that contains it, like this:
+    cnf tokenizer.c:37:9:
+student@systems-vm:~/CompOrg/tokenizer-jordag18> bash: syntax error near unexpected token `('
+student@systems-vm:~/CompOrg/tokenizer-jordag18> If '^' is not a typo you can use command-not-found to lookup the package that contains it, like this:
+    cnf ^
+student@systems-vm:~/CompOrg/tokenizer-jordag18> bash: builtin: No such file or directory
+student@systems-vm:~/CompOrg/tokenizer-jordag18> bash: syntax error near unexpected token `newline'
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make
+cc -g -O3   -c -o tokenizer.o tokenizer.c
+tokenizer.c: In function ‘count_words’:
+tokenizer.c:35:14: warning: comparison between pointer and integer
+   while(*str != NULL && *str !='\0'){
+              ^~
+tokenizer.c:36:11: warning: implicit declaration of function ‘word_start’; did you mean ‘token_start’? [-Wimplicit-function-declaration]
+     str = word_start(str);
+           ^~~~~~~~~~
+           token_start
+tokenizer.c:36:9: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+     str = word_start(str);
+         ^
+tokenizer.c:37:11: warning: implicit declaration of function ‘word_terminator’; did you mean ‘wordterminator’? [-Wimplicit-function-declaration]
+     str = word_terminator(str);
+           ^~~~~~~~~~~~~~~
+           wordterminator
+tokenizer.c:37:9: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+     str = word_terminator(str);
+         ^
+cc -o uiTest uimain.o tokenizer.o -g -O3
+/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/ld: tokenizer.o: in function `count_words':
+/home/student/CompOrg/tokenizer-jordag18/tokenizer.c:36: undefined reference to `word_start'
+/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/ld: /home/student/CompOrg/tokenizer-jordag18/tokenizer.c:37: undefined reference to `word_terminator'
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:11: uiTest] Error 1
+student@systems-vm:~/CompOrg/tokenizer-jordag18> student@systems-vm:~/CompOrg/tokenizer-jordag18> bash: syntax error near unexpected token `newline'
+student@systems-vm:~/CompOrg/tokenizer-jordag18> 
+> > 
+> make
+> 
+> 
+> hello
+> test
+> command dirs
+> `emacs
+bash: command substitution:1: unexpected EOF while looking for matching `''
+bash: command substitution:10: syntax error: unexpected end of file
+bash: student@systems-vm:~/CompOrg/tokenizer-jordag18: No such file or directory
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make
+cc -o uiTest uimain.o tokenizer.o -g -O3
+/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/ld: tokenizer.o: in function `count_words':
+/home/student/CompOrg/tokenizer-jordag18/tokenizer.c:36: undefined reference to `word_start'
+/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/ld: /home/student/CompOrg/tokenizer-jordag18/tokenizer.c:37: undefined reference to `word_terminator'
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:11: uiTest] Error 1
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make run
+cc -o uiTest uimain.o tokenizer.o -g -O3
+/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/ld: tokenizer.o: in function `count_words':
+/home/student/CompOrg/tokenizer-jordag18/tokenizer.c:36: undefined reference to `word_start'
+/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/ld: /home/student/CompOrg/tokenizer-jordag18/tokenizer.c:37: undefined reference to `word_terminator'
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:11: uiTest] Error 1
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make clean
+rm -f *.o uiTest
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make
+cc -g -O3   -c -o uimain.o uimain.c
+cc -g -O3   -c -o tokenizer.o tokenizer.c
+tokenizer.c: In function ‘count_words’:
+tokenizer.c:35:14: warning: comparison between pointer and integer
+   while(*str != NULL && *str !='\0'){
+              ^~
+tokenizer.c:36:11: warning: implicit declaration of function ‘word_start’; did you mean ‘token_start’? [-Wimplicit-function-declaration]
+     str = word_start(str);
+           ^~~~~~~~~~
+           token_start
+tokenizer.c:36:9: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+     str = word_start(str);
+         ^
+tokenizer.c:37:11: warning: implicit declaration of function ‘word_terminator’; did you mean ‘wordterminator’? [-Wimplicit-function-declaration]
+     str = word_terminator(str);
+           ^~~~~~~~~~~~~~~
+           wordterminator
+tokenizer.c:37:9: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+     str = word_terminator(str);
+         ^
+cc -o uiTest uimain.o tokenizer.o -g -O3
+/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/ld: tokenizer.o: in function `count_words':
+/home/student/CompOrg/tokenizer-jordag18/tokenizer.c:36: undefined reference to `word_start'
+/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/ld: /home/student/CompOrg/tokenizer-jordag18/tokenizer.c:37: undefined reference to `word_terminator'
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:11: uiTest] Error 1
+student@systems-vm:~/CompOrg/tokenizer-jordag18> make
+cc -g -O3   -c -o tokenizer.o tokenizer.c
+tokenizer.c: In function ‘count_tokens’:
+tokenizer.c:36:11: warning: implicit declaration of function ‘start_start’; did you mean ‘token_start’? [-Wimplicit-function-declaration]
+     str = start_start(str);
+           ^~~~~~~~~~~
+           token_start
+tokenizer.c:36:9: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+     str = start_start(str);
+         ^
+cc -o uiTest uimain.o tokenizer.o -g -O3
+/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/ld: tokenizer.o: in function `count_tokens':
+/home/student/CompOrg/tokenizer-jordag18/tokenizer.c:36: undefined reference to `start_start'
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:11: uiTest] Error 1
+student@systems-vm:~/CompOrg/tokenizer-jordag18> 

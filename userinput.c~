@@ -1,0 +1,107 @@
+#include "stdio.h"
+
+#include "stdlib.h"
+
+#include "src/tokenizer.h"
+
+#include "src/history.h"
+
+
+
+/* Compares string s to string t and returns 0 if s==t, <0 s<t, or >0 s>t */
+
+int user_strcmp (char *a, char *b)
+
+{
+
+  /* until end of string */
+
+  while (*a && *b) {
+
+    int diff = *a++ - *b++;
+
+    if (diff) {
+
+      return diff;
+
+    }
+
+  }
+
+  if (!*a && !*b) return 0;/* strings are same length & content */
+
+  return (*a) ? 1 : -1;/* a > b if a is longer */
+
+}
+void user_remove_newline (char *str)
+
+{
+
+  while (*str != '\n') {
+
+    str++;
+
+  }
+
+  //replaces the last character which is \n with \0
+
+  *str = '\0';
+
+  //Used for check below
+
+  str--;
+
+  //Handles a possible bug when the user input ends in space or tab
+
+  if (*str == ' ' || *str == '\t') {
+
+    *str = '\0';
+
+  }
+
+}
+
+
+
+/*Checks to see if bang/! was used*/
+
+int user_bang(char *user)
+
+{
+
+  //Just checks first character
+
+  if(*user == '!') return 1;
+
+  return 0;
+
+}
+int get_id(char *user)
+
+{
+
+  //increased by one to move past !
+
+  user++;
+
+  char *start = user;
+
+  int len = string_len(start);
+
+  //printf("len is %d\n",len);
+
+  //makes a pointer to the cop
+
+  char *pNum = copy_str(start,len);
+
+  //Changes the character num to an integer
+
+  int num = atoi(pNum);
+
+  free(pNum);
+
+  //printf("num is %s\n",pNum);
+
+  return num;
+
+}
