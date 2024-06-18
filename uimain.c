@@ -13,7 +13,7 @@ int main()
 
   while(1){
 
-    printf("Welcome to Didi's Tokenizer! Enter a string, 'h' for history or 'q' to quit\n");
+    printf("Welcome to my Tokenizer! Enter a string, 'h' for history or 'q' to quit\n");
 
     printf(">");
 
